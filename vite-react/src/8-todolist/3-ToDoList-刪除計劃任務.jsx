@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+    import React, {Component} from 'react';
 import "./todolist.css"
 
 class ToDoList extends Component {
@@ -25,12 +25,8 @@ class ToDoList extends Component {
                                 <span onClick={() => {
                                     this.deleteTask(index)
                                 }}>删除</span>
-                                <span onClick={() => {
-                                    this.moveUp(index)
-                                }}>↑</span>
-                                <span onClick={() => {
-                                    this.moveDown(index)
-                                }}>↓</span>
+                                <span>↑</span>
+                                <span>↓</span>
                             </li>
                         )
                     })}
@@ -59,39 +55,6 @@ class ToDoList extends Component {
         // const tasks = this.state.tasks.concat(newTask);
         // this.setState({tasks: tasks});
 
-    }
-
-    moveUp(index) {
-        console.log(index);
-        let tempTask = this.state.tasks[index-1];
-        console.log(tempTask);
-        if(index === 0) {
-            return;
-        }
-        const tasks = this.state.tasks.concat();
-        tasks[index-1] = tasks[index];
-        console.log(tasks[index -1]);
-        // tasks.splice(index, 1);
-        tasks[index] = tempTask;
-        console.log(tasks[index]);
-        this.setState({tasks: tasks});
-    }
-
-    moveDown(index) {
-        console.log(index);
-        let tempTask = this.state.tasks[index + 1];
-        console.log(tempTask);
-        if(index === this.state.tasks.length - 1) {
-            return;
-        }
-
-        const tasks = this.state.tasks.concat();
-        tasks[index+1] = tasks[index];
-        console.log(tasks[index +1]);
-        // tasks.splice(index, 1);
-        tasks[index] = tempTask;
-        console.log(tasks[index]);
-        this.setState({tasks: tasks});
     }
 
     deleteTask(index) {
