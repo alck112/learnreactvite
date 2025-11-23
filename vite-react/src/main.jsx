@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 // import './index.css'
-import App6 from "./App6-同輩狀態共享-發佈訂閱.jsx";
+import App8 from "./App8-React的插槽基本使用.jsx";
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App6></App6>
+    <App8></App8>
   </StrictMode>,
 )
