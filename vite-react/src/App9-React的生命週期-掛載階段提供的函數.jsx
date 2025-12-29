@@ -17,4 +17,4 @@ class App9 extends Component {
     }
 }
 
-export default App9 ;
+export defaul   t App9 ;
